@@ -11,7 +11,7 @@ export async function getProjects(){
 
     //groq query for projects in our db
     return client.fetch(
-        groq`*[_type = "project"]{
+        groq`*[_type == "project"]{
             _id,
             _createdAt,
             name,
