@@ -7,11 +7,13 @@ export default async function Home() {
   //by default, pages under app are server side rendered
 
   
-  return <div>
-    {projects.map((project) => (
-      <div key={project.id}>
-        {project.name}
-      </div>
-    ))}
-  </div>;
+  return (
+    <div>
+      {projects.map((project) => (
+        <div key={project.id}>
+          {project.name}
+        </div>
+      ))}
+    </div>
+  );
 }
