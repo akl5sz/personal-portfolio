@@ -1,6 +1,7 @@
+import { Project } from "@/types/Project";
 import { createClient, groq } from "next-sanity";
 
-export async function getProjects(){
+export async function getProjects(): Promise<Project[]>{ //we do this ": Promise<Project[]>" so we dont have to specify the alias we are using every time in a file when calling this method
     
     //client to read data from our studio
     const client = createClient({
